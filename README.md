@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# Frontend Assignment – Storybook Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was built as part of the internship **Frontend Assignment**.  
+It implements reusable UI components documented and showcased using **Storybook**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Folder Structure
 
-## Expanding the ESLint configuration
+frontend-assignment/
+├── .storybook/ # Storybook configuration
+├── src/
+│ ├── components/ # Reusable UI components (Button, InputField, DataTable)
+│ └── stories/ # Storybook stories
+├── public/ # Static assets
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md # You are here 🚀
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+yaml
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React 18 + TypeScript**
+- **Vite** (build tool)
+- **TailwindCSS** (styling)
+- **Storybook 9 (React-Vite)**
+- **Chromatic** (deployment + preview)
+- **GitHub** (version control)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Setup Instructions
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository**
+   ```bash
+   git clone <your-github-repo-url>
+   cd frontend-assignment
+Install dependencies
+
+bash
+Copy code
+npm install
+Run Storybook locally
+
+bash
+Copy code
+npm run storybook
+Storybook will be available at: http://localhost:6006
+
+Build Storybook
+
+bash
+Copy code
+npm run build-storybook
+Deploy to Chromatic
+
+bash
+Copy code
+npm run chromatic
+(requires project token – already configured in package.json)
+
+🖼️ Components Implemented
+🔘 Button
+Primary / Secondary states
+
+Light / Dark theme support
+
+Sizes: Small, Medium, Large
+
+⌨️ InputField
+Variants: Filled, Outlined, Ghost
+
+States: Default, Disabled, Error
+
+Supports helper text and error messages
+
+📊 DataTable
+Sortable columns
+
+Row selection
+
+Empty + Loading states
+
+🌍 Deployment
+🔗 Storybook Preview (Chromatic):
+View Live Storybook
+
+🔗 GitHub Repository:
+GitHub Repo Link
+
+💡 Approach
+Set up React + Vite + Storybook 9 environment.
+
+Built reusable UI components (Button, InputField, DataTable) inside src/components/.
+
+Documented each component with stories in src/stories/.
+
+Used TailwindCSS for styling with consistent utility classes.
+
+Deployed Storybook using Chromatic for review and collaboration.
